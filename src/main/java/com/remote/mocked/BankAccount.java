@@ -10,10 +10,11 @@ public class BankAccount
         static
         {
             waterBillerAccNumber = new BankAccount("Acc987");
+            balance = new HashMap<>();
             balance.put(waterBillerAccNumber.accountNumber, 1000);
-            balance.put("Accsrivari", 190);
-            balance.put("Accdevapriya", 1900);
-            balance.put("Accsrivishnu", 40);
+            balance.put("Acc1", 190);
+            balance.put("Acc2", 1900);
+            balance.put("Acc3", 40);
 
         }
 

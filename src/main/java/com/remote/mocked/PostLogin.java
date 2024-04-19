@@ -15,6 +15,6 @@ public class PostLogin
     public void findUser()
     {
         this.login_status = Login_status.LOGGED_IN;
-        this.AccountNumber = "Accsrivari";
+        this.AccountNumber = "Acc2";
     }
 }

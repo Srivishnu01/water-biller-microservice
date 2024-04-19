@@ -64,32 +64,17 @@ function login() {
     var password = document.getElementById("psw").value;
 
     // Make a POST request to your API endpoint for user authentication
-    fetch('https://yourapi.com/login', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            username: username,
-            password: password
-        })
+    fetch('http://localhost:8080/v1/pay-water-bill?username=s&password=e', {
+        method: 'GET'
     })
     .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
         return response.json();
     })
     .then(data => {
-        // Handle successful authentication response
-        // For example, redirect to a success page
-        window.location.href = "success.jsp";
+        alert(data.message);
     })
     .catch(error => {
-        // Handle error
-        console.error('There was a problem with the login:', error);
-        // Optionally, display an error message to the user
-        alert('Invalid username or password. Please try again.');
+        alert(error.message);
     });
 }
 </script>

@@ -3,8 +3,6 @@ package com.main;
 import com.remote.mocked.BankAccount;
 import com.remote.mocked.WaterBill;
 import org.json.simple.JSONObject;
-import com.mashape.unirest.http.Unirest;
-import com.mashape.unirest.http.exceptions.UnirestException;
 import com.remote.mocked.PostLogin;
 
 import java.io.IOException;
@@ -53,7 +51,6 @@ public class Main extends HttpServlet {
             JSONObject json = new JSONObject();
             json.put("message", "Insufficient bank balance");
             out.print(json.toString());
-            res.setStatus(400);
         }
     }
 }
